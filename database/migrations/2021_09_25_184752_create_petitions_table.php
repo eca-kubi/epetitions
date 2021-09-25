@@ -17,7 +17,9 @@ class CreatePetitionsTable extends Migration
             $table->id();
             $table->string('title');
             $table->text('category');
-            $table->string('description');
+            $table->text('description');
+            $table->string('author');
+            $table->integer('signees');
             $table->timestamps();
         });
     }

@@ -22,7 +22,11 @@ class PetitionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'title' => $this->faker->word,
+            'category' => $this->faker->text(100),
+            'description' => $this->faker->text(200),
+            'author' => $this->faker->name,
+            'signees' => $this->faker->numberBetween(0, 10000)
         ];
     }
 }
