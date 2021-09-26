@@ -19,7 +19,8 @@ class PetitionResource extends JsonResource
             'title' => $this->title,
             'author' => $this->author,
             'description' => $this->description,
-            'category' => $this->category
+            'category' => $this->category,
+            'signees' => $this->signees
         ];
     }
 }
