@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Models\Petition;
 use Illuminate\Http\Resources\Json\ResourceCollection;
 
 class PetitionCollection extends ResourceCollection
@@ -14,6 +15,10 @@ class PetitionCollection extends ResourceCollection
      */
     public function toArray($request)
     {
-        return parent::toArray($request);
+        return [
+            'data' => $this->collection,
+            'version' => '1.1.0',
+            'author' => 'Eric Clinton'
+        ];
     }
 }
